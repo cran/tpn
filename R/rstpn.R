@@ -1,0 +1,21 @@
+rstpn <-
+function(n, sigma, lambda, q)
+{
+if(is.null(n))
+    stop("sample size must be specified")
+  if(is.null(sigma))
+    stop("sigma must be specified")
+  if(is.null(lambda))
+    stop("lambda must be specified")
+  if(is.null(q))
+    stop("q must be specified")
+  if(sigma<=0)
+    stop("sigma must be positive")
+  if(q<=0)
+    stop("q must be positive")
+  if(n<=0 | round(n)!=n)
+    stop("sample size must be a positive integer")      
+v=runif(n);u=runif(n)
+z=sigma*(qnorm(1+pnorm(lambda)*(v-1))+lambda)
+z/u^(1/q)
+}

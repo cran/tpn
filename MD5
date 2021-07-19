@@ -1,0 +1,15 @@
+1d1a961fc0b493b7f3a3f5ae7e7e2559 *DESCRIPTION
+334a3cf3eaf7d6f2f3b84faa6082f83b *INDEX
+cfe7564cba9f1df10c66e34ba324f048 *NAMESPACE
+c0d17c734be461876f3884b43b7d0258 *R/dstpn.R
+6829769d3bdde47f97639fd90d076a01 *R/dtpn.R
+1105087271f52fe0298c1a61bfcc7bf9 *R/est.stpn.R
+e50311cb4a08d01ff0c1399c8a7c9467 *R/est.tpn.R
+7d0bde2858ad8de1966fbaa16da06d63 *R/pstpn.R
+aa705a2f41ab15b2bbff7f10420d877e *R/ptpn.R
+16dea0c9ea8cfd7e8a7f5ad979cb50f3 *R/rstpn.R
+94bf3e7823e22c1c450731b938d9f8af *R/rtpn.R
+a171f093a243d7c04d1f4dca13b178b6 *man/est.stpn.Rd
+4ce8a740c65ef2b1004b0e19a7a54a8b *man/est.tpn.Rd
+afecd1e36f1486469a356f1a79a672a4 *man/stpn.Rd
+1a398d8397fc7102e93a4c0f51a8a95f *man/tpn.Rd

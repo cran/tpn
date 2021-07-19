@@ -1,0 +1,5 @@
+export("dstpn", "dtpn", "est.stpn", "est.tpn", "pstpn", "ptpn",
+       "rstpn", "rtpn")
+importFrom("stats","dnorm", "pnorm", "integrate", "optim", 
+	"runif", "qnorm")
+importFrom("pracma", "hessian")

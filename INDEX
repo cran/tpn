@@ -1,0 +1,4 @@
+est.stpn   Parameter estimation for the stpn.
+est.tpn    Parameter estimation for the tpn.
+stpn       Slash truncated positive normal.
+tpn        Truncated positive normal.
