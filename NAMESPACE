@@ -1,5 +1,6 @@
-export("dstpn", "dtpn", "est.stpn", "est.tpn", "pstpn", "ptpn",
-       "rstpn", "rtpn")
+export("dbtpn", "dstpn", "dtpn", "est.btpn", "est.stpn", "est.tpn", "pbtpn", "pstpn", "ptpn",
+       "rbtpn", "rstpn", "rtpn")
 importFrom("stats","dnorm", "pnorm", "integrate", "optim", 
 	"runif", "qnorm")
 importFrom("pracma", "hessian")
+importFrom("skewMLRM", "solve2")
