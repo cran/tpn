@@ -1,6 +1,8 @@
 btpn       Bimodal truncated positive normal.
 est.btpn   Parameter estimation for the btpn.
+est.ftpn   Parameter estimation for the ftpn.
 est.stpn   Parameter estimation for the stpn.
 est.tpn    Parameter estimation for the tpn.
+ftpn       Flexible truncated positive normal.
 stpn       Slash truncated positive normal.
 tpn        Truncated positive normal.

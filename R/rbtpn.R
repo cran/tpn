@@ -1,5 +1,5 @@
 rbtpn <-
-function(n, sigma, lambda, eta)
+function(n, sigma=1, lambda=0, eta=0)
 {
     if (is.null(n)) 
         stop("sample size must be specified")

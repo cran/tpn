@@ -125,5 +125,3 @@ if(ncol(param)==1) res$warnings[length(res$warnings)+1]="Standard errors can't b
 }
 res
 }
-
-

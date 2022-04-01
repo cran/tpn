@@ -1,5 +1,5 @@
 dbtpn <-
-function(x, sigma, lambda, eta, log=FALSE)
+function(x, sigma=1, lambda=0, eta=0, log=FALSE)
 {
     if (is.null(x)) 
         stop("x must be specified")

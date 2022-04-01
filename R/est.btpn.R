@@ -9,7 +9,7 @@ if (trans.param) sigma = exp(theta[1])
 ll=-log(2)-log(sigma)-pnorm(lambda, log.p=TRUE)+dnorm(y*sqrt(1+eta^2)/(sigma*(sqrt(1+eta^2)-eta))-lambda,log=TRUE)*ifelse(y>=0,1,0)+dnorm(-y*sqrt(1+eta^2)/(sigma*(sqrt(1+eta^2)+eta))-lambda,log=TRUE)*ifelse(y<0,1,0)
 -sum(ll)
 }
-aux = optim(c(0, 0,0), llike.BTPN, y = y, trans.param = TRUE, 
+aux = optim(c(0, 0, 0), llike.BTPN, y = y, trans.param = TRUE, 
         method = "Nelder-Mead", control = list(maxit = 10000))
     param = cbind(c(exp(aux$par[1]), aux$par[2:3]))
     colnames(param) = c("estimate")

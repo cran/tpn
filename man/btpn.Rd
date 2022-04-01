@@ -6,7 +6,7 @@
 }
 \description{
 Density, distribution function and random generation for the bimodal truncated positive normal (btpn) discussed in 
-Gomez et al. (2021).
+Gomez et al. (2022).
 }
 \usage{
 dbtpn(x, sigma, lambda, eta, log = FALSE)
@@ -51,8 +51,8 @@ The numerical arguments other than n are recycled to the length of the result. O
 
 }
 \references{
-Gomez, H.J., Caimanque, W., Concha, M., Gomez, Y.M., Gallardo, D.I. (2021) Bimodal Truncation Positive Normal 
-Distribution. Submitted 
+Gomez, H.J., Caimanque, W., Gomez, Y.M., Magalhaes, T.M., Concha, M., Gallardo, D.I. (2022) Bimodal Truncation Positive Normal 
+Distribution. Symmetry, 14, 665.
 
 Gomez, H.J., Olmos, N.M., Varela, H., Bolfarine, H. (2018). Inference for a truncated positive normal
 distribution. Applied Mathemetical Journal of Chinese Universities, 33, 163-176.

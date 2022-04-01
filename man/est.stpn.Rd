@@ -45,7 +45,7 @@ A list with the following components
 }
 \references{
 Gomez, H., Gallardo, D.I., Santoro, K. (2021) Slash Truncation Positive Normal Distribution: with
-application using the EM algorithm. Submitted 
+application using the EM algorithm. Symmetry, 13, 2164.
 }
 \author{
 Gallardo, D.I. and Gomez, H.J.

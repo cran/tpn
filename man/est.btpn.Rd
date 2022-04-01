@@ -5,7 +5,7 @@
 Parameter estimation for the btpn
 }
 \description{
-Perform the parameter estimation for the bimodal truncated positive normal (btpn) discussed in Gomez et al. (2021). 
+Perform the parameter estimation for the bimodal truncated positive normal (btpn) discussed in Gomez et al. (2022). 
 Estimated errors are computed based on the hessian matrix.
 }
 \usage{
@@ -36,8 +36,8 @@ A list with the following components
 \item{BIC}{Schwartz's criterion.}
 }
 \references{
-Gomez, H.J., Caimanque, W., Concha, M., Gomez, Y.M., Gallardo, D.I.  (2021) Bimodal Truncation Positive Normal 
-Distribution. Submitted 
+Gomez, H.J., Caimanque, W., Gomez, Y.M., Magalhaes, T.M., Concha, M., Gallardo, D.I. (2022) Bimodal Truncation Positive Normal 
+Distribution. Symmetry, 14, 665.
 }
 \author{
 Gallardo, D.I., Gomez, H.J. and Gomez, Y.M.
