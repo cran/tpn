@@ -9,7 +9,8 @@ Perform the parameter estimation for the slash truncated positive normal (stpn) 
 based on the EM algorithm. Estimated errors are computed based on the Louis method to approximate the hessian matrix.
 }
 \usage{
-est.stpn(y, sigma0=NULL, lambda0=NULL, q0=NULL, prec = 0.001, max.iter = 1000)
+est.stpn(y, sigma0=NULL, lambda0=NULL, q0=NULL, prec = 0.001, 
+     max.iter = 1000)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -28,12 +29,12 @@ the maximum iterations for the EM algorithm. By default is 1000.
 }
 }
 \details{
-A variable have stpn distribution with parameters sigma>0, lambda in R and q>0 if its probability density
+A variable has stpn distribution with parameters \eqn{\sigma>0, \lambda \in} R and \eqn{q>0} if its probability density
 function can be written as
-
-f(y; sigma, lambda, q) = int_0^1 (t^(1/q)*sigma)*phi(y*t^(1/q)*sigma-lambda)dt,
-
-where phi() denotes the density function for the standard normal distribution.
+\deqn{
+f(y; \sigma, \lambda, q) = \int_0^1 t^{1/q} \sigma \phi(y t^{1/q} \sigma-\lambda)dt, y>0,
+}
+where \eqn{\phi(\cdot)} denotes the density function for the standard normal distribution.
 }
 \value{
 A list with the following components

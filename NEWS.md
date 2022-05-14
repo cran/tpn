@@ -6,3 +6,10 @@
 ### 1.2
 
 * functions dftpn, pftpn, qftpn, rftpn and est.ftpn are included
+
+### 1.3
+
+* functions dftpn, pftpn, qftpn, rftpn and est.ftpn were changed to dftp, pftp, 
+  qftp, rftp
+* function choose.ftp was included
+* probability density function was included with latex format for all the models

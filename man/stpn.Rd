@@ -47,6 +47,13 @@ The length of the result is determined by n for rstpn, and is the maximum of the
 
 The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
 
+A variable has stpn distribution with parameters \eqn{\sigma>0, \lambda \in} R and \eqn{q>0} if its probability density
+function can be written as
+\deqn{
+f(y; \sigma, \lambda, q) = \int_0^1 t^{1/q} \sigma \phi(y t^{1/q} \sigma-\lambda)dt, y>0,
+}
+where \eqn{\phi(\cdot)} denotes the density function for the standard normal distribution.
+
 }
 \references{
 Gomez, H., Gallardo, D.I., Santoro, K. (2021) Slash Truncation Positive Normal Distribution: with

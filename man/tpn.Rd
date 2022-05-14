@@ -44,6 +44,13 @@ The length of the result is determined by n for rtpn, and is the maximum of the 
 
 The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
 
+A variable have tpn distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
+function can be written as
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{y}{\sigma}-\lambda\right)}{\sigma \Phi(\lambda)}, y>0,
+}
+where \eqn{\phi(\cdot)} and \eqn{\Phi(\cdot)} denote the density and cumultative distribution functions for the standard normal distribution.
+
 }
 \references{
 Gomez, H.J., Olmos, N.M., Varela, H., Bolfarine, H. (2018). Inference for a truncated positive normal

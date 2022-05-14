@@ -18,12 +18,12 @@ the response vector. All the values must be positive.
 }
 }
 \details{
-A variable have tpn distribution with parameters sigma>0 and lambda in R, if its probability density
+A variable have tpn distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
 function can be written as
-
-f(y; sigma, lambda, q) = (sigma*Phi(lambda))^(-1)*phi(y/sigma-lambda)dt,
-
-where phi() and Phi() denote the density and cumultative distribution functions for the standard normal distribution.
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{y}{\sigma}-\lambda\right)}{\sigma \Phi(\lambda)}, y>0,
+}
+where \eqn{\phi(\cdot)} and \eqn{\Phi(\cdot)} denote the density and cumultative distribution functions for the standard normal distribution.
 }
 \value{
 A list with the following components

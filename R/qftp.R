@@ -1,4 +1,4 @@
-qftpn <-
+qftp <-
 function(p, sigma=1, lambda=1, dist="norm")
 {
 if(!any(dist == c("norm", "logis", "cauchy", "laplace"))) 

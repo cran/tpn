@@ -39,8 +39,8 @@ logical; if TRUE (default), probabilities are P[X <= x] otherwise, P[X > x].
 }
 \details{
 Random generation is based on the stochastic representation of the model, i.e., the product between a tpn
-(see Gomez et al. 2018) and a dichotomous variable assuming values -(1+epsilon) and 1-epsilon with probabilities
-(1+epsilon)/2 and (1-epsilon)/2, respectively. 
+(see Gomez et al. 2018) and a dichotomous variable assuming values \eqn{-(1+\epsilon)} and \eqn{1-\epsilon} with probabilities
+\eqn{(1+\epsilon)/2} and \eqn{(1-\epsilon)/2}, respectively. 
 }
 \value{
 dbtpn gives the density, pbtpn gives the distribution function and rbtpn generates random deviates.
@@ -49,6 +49,17 @@ The length of the result is determined by n for rbtpn, and is the maximum of the
 
 The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
 
+A variable have btpn distribution with parameters \eqn{\sigma>0, \lambda \in} R and \eqn{\eta \in} R if its probability density
+function can be written as
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{x}{\sigma(1+\epsilon)}+\lambda\right)}{2\sigma\Phi(\lambda)}, y<0,
+}                         
+and
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{x}{\sigma(1-\epsilon)}-\lambda\right)}{2\sigma\Phi(\lambda)}, y\geq 0,
+}
+where \eqn{\epsilon=\eta/\sqrt{1+\eta^2}} and \eqn{\phi(\cdot)} and \eqn{\Phi(\cdot)} denote the probability density function and the cumulative distribution 
+function for the standard normal distribution, respectively.
 }
 \references{
 Gomez, H.J., Caimanque, W., Gomez, Y.M., Magalhaes, T.M., Concha, M., Gallardo, D.I. (2022) Bimodal Truncation Positive Normal 

@@ -1,8 +1,8 @@
 export("dbtpn", "dstpn", "dtpn", "est.btpn", "est.stpn", "est.tpn", "pbtpn", "pstpn", "ptpn",
-       "rbtpn", "rstpn", "rtpn", "dftpn", "pftpn", "qftpn", "rftpn", "est.ftpn")
+       "rbtpn", "rstpn", "rtpn", "dftp", "pftp", "qftp", "rftp", "est.ftp", "choose.ftp")
 importFrom("stats","dnorm", "pnorm", "integrate", "optim", 
 	"runif", "qnorm")
 importFrom("pracma", "hessian")
 importFrom("skewMLRM", "solve2")
 importFrom("moments","skewness")
-importFrom("VGAM","laplace")
+importFrom("VGAM","laplace","dlaplace","plaplace","rlaplace","qlaplace")

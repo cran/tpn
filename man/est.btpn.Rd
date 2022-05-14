@@ -18,13 +18,17 @@ the response vector. All the values must be positive.
 }
 }
 \details{
-A variable have btpn distribution with parameters sigma>0, lambda in R and eta in R if its probability density
-function can be written as
 
-f(y; sigma, lambda, q) = phi(x/(sigma*(1+epsilon))+lambda)/(2*sigma*Phi(lambda)), y<0
-                       = phi(x/(sigma*(1-epsilon))-lambda)/(2*sigma*Phi(lambda)), y>=0
-                         
-where epsilon=eta/sqrt(1+eta^2) and phi() and Phi() denote the density function and the cumulative distribution 
+A variable have btpn distribution with parameters \eqn{\sigma>0, \lambda \in} R and \eqn{\eta \in} R if its probability density
+function can be written as
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{x}{\sigma(1+\epsilon)}+\lambda\right)}{2\sigma\Phi(\lambda)}, y<0,
+}                         
+and
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{x}{\sigma(1-\epsilon)}-\lambda\right)}{2\sigma\Phi(\lambda)}, y\geq 0,
+}
+where \eqn{\epsilon=\eta/\sqrt{1+\eta^2}} and \eqn{\phi(\cdot)} and \eqn{\Phi(\cdot)} denote the probability density function and the cumulative distribution 
 function for the standard normal distribution, respectively.
 }
 \value{

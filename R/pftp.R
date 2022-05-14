@@ -1,4 +1,4 @@
-pftpn <-
+pftp <-
 function(x, sigma=1, lambda=1, dist="norm", lower.tail=TRUE, log.p=FALSE)
 {
 if(!any(dist == c("norm", "logis", "cauchy", "laplace"))) 

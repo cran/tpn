@@ -1,19 +1,19 @@
-\name{ftpn}
-\alias{dftpn}
-\alias{pftpn}
-\alias{qftpn}
-\alias{rftpn}
+\name{ftp}
+\alias{dftp}
+\alias{pftp}
+\alias{qftp}
+\alias{rftp}
 \title{Flexible truncated positive normal
 }
 \description{
-Density, distribution function and random generation for the flexible truncated positive normal (ftpn) discussed in 
+Density, distribution function and random generation for the flexible truncated positive (ftp) class discussed in 
 Gomez et al. (2022).
 }
 \usage{
-dftpn(x, sigma, lambda, dist="norm", log = FALSE)
-pftpn(x, sigma, lambda, dist="norm", lower.tail=TRUE, log.p=FALSE)
-qftpn(p, sigma, lambda, dist="norm")
-rftpn(n, sigma, lambda, dist="norm")
+dftp(x, sigma, lambda, dist="norm", log = FALSE)
+pftp(x, sigma, lambda, dist="norm", lower.tail=TRUE, log.p=FALSE)
+qftp(p, sigma, lambda, dist="norm")
+rftp(n, sigma, lambda, dist="norm")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -47,11 +47,20 @@ logical; if TRUE (default), probabilities are P[X <= x] otherwise, P[X > x].
 Random generation is based on the inverse transformation method. 
 }
 \value{
-dftpn gives the density, pftpn gives the distribution function, qftpn gives the quantile function and rftpn generates random deviates.
+dftp gives the density, pftp gives the distribution function, qftp gives the quantile function and rftp generates random deviates.
 
 The length of the result is determined by n for rbtpn, and is the maximum of the lengths of the numerical arguments for the other functions.
 
 The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
+
+A variable have ftp distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
+function can be written as
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{g_0(\frac{y}{\sigma}-\lambda)}{\sigma G_0(\lambda)}, y>0,
+}
+where \eqn{g_0(\cdot)} and \eqn{G_0(\cdot)} denote the pdf and cdf for the specified distribution.
+The case where \eqn{g_0(\cdot)} and \eqn{G_0(\cdot)} are from the standard normal model is known as the truncated positive normal model discussed
+in Gomez et al. (2018).
 
 }
 \references{
@@ -74,9 +83,9 @@ Gallardo, D.I., Gomez, H.J. and Gomez, Y.M.
 %\code{\link{stpn}}
 %}
 \examples{
-dftpn(c(1,2), sigma=1, lambda=1, dist="logis")
-pftpn(c(1,2), sigma=1, lambda=1, dist="logis")
-rftpn(n=10, sigma=1, lambda=1, dist="logis")
+dftp(c(1,2), sigma=1, lambda=1, dist="logis")
+pftp(c(1,2), sigma=1, lambda=1, dist="logis")
+rftp(n=10, sigma=1, lambda=1, dist="logis")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

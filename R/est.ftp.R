@@ -1,4 +1,4 @@
-est.ftpn <-
+est.ftp <-
 function(y, dist="norm"){
 if(any(y<=0)) stop("y must be positive")
 if(!any(dist == c("norm", "logis", "cauchy", "laplace"))) 

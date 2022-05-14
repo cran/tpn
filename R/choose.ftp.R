@@ -1,18 +1,18 @@
-choose.ftpn <-
-function(y, criteria="AIC")
+
+choose.ftp<-function(y, criteria="AIC")
 {
-if(any(y<=0)) stop("y must be positive")
-if(!any(criteria == c("AIC", "BIC"))) 
+	if(any(y<=0)) stop("y must be positive")
+	if(!any(criteria == c("AIC", "BIC"))) 
             stop("criteria is not recognized")
-aux.n =est.ftpn(y, dist="norm")
-aux.la=est.ftpn(y, dist="laplace")
-aux.c =est.ftpn(y, dist="cauchy")
-aux.lo=est.ftpn(y, dist="logis")
-if (grepl("Error", aux.n)[1] & grepl("Error", 
+	aux.n =est.ftp(y, dist="norm")
+	aux.la=est.ftp(y, dist="laplace")
+	aux.c =est.ftp(y, dist="cauchy")
+	aux.lo=est.ftp(y, dist="logis")
+	if (grepl("Error", aux.n)[1] & grepl("Error", 
         aux.la)[1] & grepl("Error", aux.c)[1] & 
         grepl("Error", aux.lo)[1]) {
         stop("estimation problem in all the considered models")}
-index <- c()
+	index <- c()
     maxi = c()
     if (criteria == "AIC") {
         if (grepl("Error", aux.n)[1] == FALSE) {
@@ -50,14 +50,14 @@ index <- c()
             maxi <- c(maxi, aux.lo$BIC)
         }
     }
-names(maxi)<-c("norm","laplace","cauchy","logistic")[index] 
-index <- index[which.min(maxi)]
-aux <- switch(index, "1" = aux.n, "2" = aux.la, 
+	names(maxi)<-c("normal","laplace","cauchy","logistic")[index] 
+	index <- index[which.min(maxi)]
+	aux <- switch(index, "1" = aux.n, "2" = aux.la, 
         "3" = aux.c, "4" = aux.lo)
-selected <- aux$dist
-if(criteria=="AIC") res=list(AIC = maxi, selected = selected, estimate = aux$estimate,
-conv=aux$conv, logLik=aux$logLik, AIC=aux$AIC, BIC=aux$BIC)
-if(criteria=="BIC") res=list(BIC = maxi, selected = selected, estimate = aux$estimate,
-conv=aux$conv, logLik=aux$logLik, AIC=aux$AIC, BIC=aux$BIC)
-res
+	selected <- aux$dist
+	if(criteria=="AIC") res=list(AIC = maxi, selected = selected, estimate = aux$estimate,
+		conv=aux$conv, logLik=aux$logLik, AIC=aux$AIC, BIC=aux$BIC)
+	if(criteria=="BIC") res=list(BIC = maxi, selected = selected, estimate = aux$estimate,
+		conv=aux$conv, logLik=aux$logLik, AIC=aux$AIC, BIC=aux$BIC)
+	res
 }

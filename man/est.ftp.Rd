@@ -1,15 +1,15 @@
-\name{est.ftpn}
-\alias{est.ftpn}
+\name{est.ftp}
+\alias{est.ftp}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Parameter estimation for the ftpn
+Parameter estimation for the ftp class of distributions
 }
 \description{
-Perform the parameter estimation for the Flexible truncated positive normal (ftpn) discussed in Gomez et al. (2022)
+Perform the parameter estimation for the Flexible truncated positive (ftp) class discussed in Gomez et al. (2022)
 based on maximum likelihood estimation. Estimated errors are computed based on the hessian matrix.
 }
 \usage{
-est.ftpn(y, dist="norm")
+est.ftp(y, dist="norm")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -22,13 +22,13 @@ cauchy and laplace.
 }
 }
 \details{
-A variable have ftpn distribution with parameters sigma>0 and lambda in R, if its probability density
+A variable has ftp distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
 function can be written as
-
-f(y; sigma, lambda, q) = (sigma*G0(lambda))^(-1)*g0(y/sigma-lambda),
-
-where g0() and G0() denote the density and cumultative distribution functions for the specified distribution.
-The case where g0() and G0() are from the normal model is known as the truncated positive normal model discussed
+\deqn{
+f(y; \sigma, \lambda, q) = \frac{g_0(\frac{y}{\sigma}-\lambda)}{\sigma G_0(\lambda)}, y>0,
+}
+where \eqn{g_0(\cdot)} and \eqn{G_0(\cdot)} denote the pdf and cdf for the specified distribution.
+The case where \eqn{g_0(\cdot)} and \eqn{G_0(\cdot)} are from the standard normal model is known as the truncated positive normal model discussed
 in Gomez et al. (2018).
 }
 \value{
@@ -61,8 +61,8 @@ A warning is presented if the estimated hessian matrix is not invertible.
 %}
 \examples{
 set.seed(2021)
-y=rftpn(n=100,sigma=10,lambda=1,dist="logis")
-est.ftpn(y,dist="logis")
+y=rftp(n=100,sigma=10,lambda=1,dist="logis")
+est.ftp(y,dist="logis")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
