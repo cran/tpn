@@ -1,5 +1,6 @@
 export("dbtpn", "dstpn", "dtpn", "est.btpn", "est.stpn", "est.tpn", "pbtpn", "pstpn", "ptpn",
-       "rbtpn", "rstpn", "rtpn", "dftp", "pftp", "qftp", "rftp", "est.ftp", "choose.ftp")
+       "rbtpn", "rstpn", "rtpn", "dftp", "pftp", "qftp", "rftp", "est.ftp", "choose.ftp",
+	"rutpn", "dutpn", "putpn", "qutpn", "est.utpn")
 importFrom("stats","dnorm", "pnorm", "integrate", "optim", 
 	"runif", "qnorm")
 importFrom("pracma", "hessian")

@@ -2,7 +2,7 @@
 \alias{est.btpn}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Parameter estimation for the btpn
+Parameter estimation for the btpn model
 }
 \description{
 Perform the parameter estimation for the bimodal truncated positive normal (btpn) discussed in Gomez et al. (2022). 

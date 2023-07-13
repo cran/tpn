@@ -1,0 +1,20 @@
+dutpn<-function(x, sigma=1, lambda=0, type=1, log=FALSE)
+{
+	if(type!=1 & type!=2) stop("type must be 1 or 2")
+	if (is.null(x)) 
+        stop("x must be specified")
+    if (is.null(sigma)) 
+        stop("sigma must be specified")
+    if (is.null(lambda)) 
+        stop("lambda must be specified")
+    if (sigma <= 0) 
+        stop("sigma must be positive")
+    if (any(x <= 0)) 
+        stop("x's must be positive")
+	if(type!=1 & type!=2) stop("type must be 1 or 2")
+	lf = -log(sigma)-2*log(x)-pnorm(lambda,log.p=TRUE)+dnorm((1-x)/(sigma*x)-lambda,log=TRUE)
+	if(type==2) lf = -log(sigma)-2*log1p(-x)-pnorm(lambda,log.p=TRUE)+dnorm(x/(sigma*(1-x))-lambda,log=TRUE)
+	if (!log) 
+        lf = exp(lf)
+    lf
+}

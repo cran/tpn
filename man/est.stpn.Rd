@@ -2,7 +2,7 @@
 \alias{est.stpn}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Parameter estimation for the stpn
+Parameter estimation for the stpn model
 }
 \description{
 Perform the parameter estimation for the slash truncated positive normal (stpn) discussed in Gomez, Gallardo and Santoro (2021)

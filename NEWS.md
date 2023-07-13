@@ -13,3 +13,7 @@
   qftp, rftp
 * function choose.ftp was included
 * probability density function was included with latex format for all the models
+
+### 1.4
+
+* functions dutpn, putpn, qutpn, rutpn and est.utpn are included
