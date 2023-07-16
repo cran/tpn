@@ -17,3 +17,10 @@
 ### 1.4
 
 * functions dutpn, putpn, qutpn, rutpn and est.utpn are included
+
+### 1.5
+
+* fixed error in est.utpn function
+
+
+

@@ -3,7 +3,7 @@ if(any(y<=0 | y>=1)) stop("y must be between 0 and 1")
 if(!any(link == c("logit"))) 
             stop("link is not recognized")
 if(type!=1 & type!=2) stop("type must be 1 or 2")
-if(is.null(x)) x <- matrix(1, ncol=1, nrow=length(y)); colnames(x)<-"Intercept"
+if(is.null(x)) {x <- matrix(1, ncol=1, nrow=length(y)); colnames(x)<-"Intercept"}
 r=ncol(x)
 llike.utpn <- function(theta, y, x, type=1, link="logit", q=0.5){
 beta=theta[1:r]; lambda=theta[r+1]
