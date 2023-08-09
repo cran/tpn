@@ -1,8 +1,8 @@
 btpn         Bimodal truncated positive normal.
-choose.ftp   Choose a distribution in the flexible truncated 
+choose.fts   Choose a distribution in the flexible truncated 
              positive class of models
 est.btpn     Parameter estimation for the btpn model.
-est.ftpn     Parameter estimation for the ftpn.
+est.ftps     Parameter estimation for the ftps model.
 est.stpn     Parameter estimation for the stpn model.
 est.tpn      Parameter estimation for the tpn model.
 est.utpn     Parameter estimation for the utpn model.

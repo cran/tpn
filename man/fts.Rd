@@ -1,8 +1,8 @@
-\name{ftp}
-\alias{dftp}
-\alias{pftp}
-\alias{qftp}
-\alias{rftp}
+\name{fts}
+\alias{dfts}
+\alias{pfts}
+\alias{qfts}
+\alias{rfts}
 \title{Flexible truncated positive normal
 }
 \description{
@@ -10,10 +10,10 @@ Density, distribution function and random generation for the flexible truncated 
 Gomez et al. (2022).
 }
 \usage{
-dftp(x, sigma, lambda, dist="norm", log = FALSE)
-pftp(x, sigma, lambda, dist="norm", lower.tail=TRUE, log.p=FALSE)
-qftp(p, sigma, lambda, dist="norm")
-rftp(n, sigma, lambda, dist="norm")
+dfts(x, sigma, lambda, dist="norm", log = FALSE)
+pfts(x, sigma, lambda, dist="norm", lower.tail=TRUE, log.p=FALSE)
+qfts(p, sigma, lambda, dist="norm")
+rfts(n, sigma, lambda, dist="norm")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -47,13 +47,13 @@ logical; if TRUE (default), probabilities are P[X <= x] otherwise, P[X > x].
 Random generation is based on the inverse transformation method. 
 }
 \value{
-dftp gives the density, pftp gives the distribution function, qftp gives the quantile function and rftp generates random deviates.
+dfts gives the density, pfts gives the distribution function, qfts gives the quantile function and rfts generates random deviates.
 
 The length of the result is determined by n for rbtpn, and is the maximum of the lengths of the numerical arguments for the other functions.
 
 The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
 
-A variable have ftp distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
+A variable have fts distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
 function can be written as
 \deqn{
 f(y; \sigma, \lambda, q) = \frac{g_0(\frac{y}{\sigma}-\lambda)}{\sigma G_0(\lambda)}, y>0,
@@ -83,9 +83,9 @@ Gallardo, D.I., Gomez, H.J. and Gomez, Y.M.
 %\code{\link{stpn}}
 %}
 \examples{
-dftp(c(1,2), sigma=1, lambda=1, dist="logis")
-pftp(c(1,2), sigma=1, lambda=1, dist="logis")
-rftp(n=10, sigma=1, lambda=1, dist="logis")
+dfts(c(1,2), sigma=1, lambda=1, dist="logis")
+pfts(c(1,2), sigma=1, lambda=1, dist="logis")
+rfts(n=10, sigma=1, lambda=1, dist="logis")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

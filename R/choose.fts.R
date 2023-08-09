@@ -1,13 +1,13 @@
 
-choose.ftp<-function(y, criteria="AIC")
+choose.fts<-function(y, criteria="AIC")
 {
 	if(any(y<=0)) stop("y must be positive")
 	if(!any(criteria == c("AIC", "BIC"))) 
             stop("criteria is not recognized")
-	aux.n =est.ftp(y, dist="norm")
-	aux.la=est.ftp(y, dist="laplace")
-	aux.c =est.ftp(y, dist="cauchy")
-	aux.lo=est.ftp(y, dist="logis")
+	aux.n =est.fts(y, dist="norm")
+	aux.la=est.fts(y, dist="laplace")
+	aux.c =est.fts(y, dist="cauchy")
+	aux.lo=est.fts(y, dist="logis")
 	if (grepl("Error", aux.n)[1] & grepl("Error", 
         aux.la)[1] & grepl("Error", aux.c)[1] & 
         grepl("Error", aux.lo)[1]) {

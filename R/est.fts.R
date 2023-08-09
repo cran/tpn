@@ -1,4 +1,4 @@
-est.ftp <-
+est.fts <-
 function(y, dist="norm"){
 if(any(y<=0)) stop("y must be positive")
 if(!any(dist == c("norm", "logis", "cauchy", "laplace"))) 
@@ -12,7 +12,9 @@ g <- get(paste("d", dist, sep = ""), mode = "function")
 G <- get(paste("p", dist, sep = ""), mode = "function")
 ll <- -log(sigma)-G(lambda, log.p=TRUE)+g(x/sigma-lambda,log=TRUE)
 -sum(ll)}
-aux <- optim(c(log(sigma.ini),lambda.ini), llike.ftpn, x=y, dist=dist, t.param=TRUE, method="BFGS",
+aux <- optim(c(log(sigma.ini),lambda.ini), llike.ftpn, x=y, dist=dist, t.param=TRUE, method="Nelder-Mead",
+control = list(maxit = 10000))
+aux <- optim(aux$par, llike.ftpn, x=y, dist=dist, t.param=TRUE, method="BFGS",
 control = list(maxit = 10000))
 param = cbind(c(exp(aux$par[1]), aux$par[2]))
 colnames(param) = c("estimate")

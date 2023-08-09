@@ -22,5 +22,10 @@
 
 * fixed error in est.utpn function
 
+### 1.6
+
+* functions dftp, pftp, qftp, rftp, est.ftp and choose.ftp were changed to dfts, pfts, 
+  qfts, rfts, est.fts and choose.fts, respectively
+* corrected computation of AIC and BIC for est.utpn function
 
 

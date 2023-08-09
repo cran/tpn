@@ -1,4 +1,4 @@
-dftp <-
+dfts <-
 function(x, sigma=1, lambda=1, dist="norm", log=FALSE)
 {
 if(!any(dist == c("norm", "logis", "cauchy", "laplace"))) 

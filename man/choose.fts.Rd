@@ -1,5 +1,5 @@
-\name{choose.ftp}
-\alias{choose.ftp}
+\name{choose.fts}
+\alias{choose.fts}
 \title{
 Choose a distribution in the flexible truncated positive class of models
 }
@@ -7,7 +7,7 @@ Choose a distribution in the flexible truncated positive class of models
 Provide model selection for a given data set in the flexible truncated positive class of models
 }
 \usage{
-choose.ftp(y, criteria = "AIC")
+choose.fts(y, criteria = "AIC")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -55,8 +55,8 @@ Gallardo, D.I., Gomez, H.J. and Gomez, Y.M.
 %}
 \examples{
 set.seed(2021)
-y=rftp(n=100,sigma=10,lambda=1,dist="logis")
-choose.ftp(y)
+y=rfts(n=100,sigma=10,lambda=1,dist="logis")
+choose.fts(y)
 }
 
 
