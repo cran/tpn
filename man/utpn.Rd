@@ -52,10 +52,19 @@ The length of the result is determined by n for rtpn, and is the maximum of the 
 
 The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
 
-A variable have utpn distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
+A variable has utpn distribution with scale parameter \eqn{\sigma>0} and shape parameter \eqn{\lambda \in} R if its probability density
 function can be written as
 \deqn{
-f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{y}{\sigma}-\lambda\right)}{\sigma \Phi(\lambda)}, y>0,
+f(y; \sigma, \lambda) = \frac{\phi\left(\frac{1-y}{\sigma y}-\lambda\right)}{\sigma y^2\Phi(\lambda)}, y>0, \mbox{(type 1),}
+}
+\deqn{
+f(y; \sigma, \lambda) = \frac{\phi\left(\frac{y}{\sigma (1-y)}-\lambda\right)}{\sigma (1-y)^2\Phi(\lambda)}, y>0, \mbox{(type 2),}
+}
+\deqn{
+f(y; \sigma, \lambda) = \frac{\phi\left(\frac{\log(y)}{\sigma}+\lambda\right)}{\sigma y\Phi(\lambda)}, y>0, \mbox{(type 3),}
+}
+\deqn{
+f(y; \sigma, \lambda) = \frac{\phi\left(\frac{\log(1-y)}{\sigma}+\lambda\right)}{\sigma (1-y)\Phi(\lambda)}, y>0, \mbox{(type 4),}
 }
 where \eqn{\phi(\cdot)} and \eqn{\Phi(\cdot)} denote the density and cumulative distribution functions for the standard normal distribution.
 

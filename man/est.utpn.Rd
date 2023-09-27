@@ -5,7 +5,7 @@
 Parameter estimation for the utpn model
 }
 \description{
-Perform the parameter estimation for the unit truncated positive normal (utpn) type 1 or 2
+Perform the parameter estimation for the unit truncated positive normal (utpn) type 1, 2, 3 or 4,
 parameterized in terms of the quantile based on maximum likelihood estimation. 
 Estimated errors are computed based on the hessian matrix.
 }
@@ -21,7 +21,7 @@ the response vector. All the values must be positive.
 the covariates vector.
 }
 \item{type}{
-to distinguish the type of the utpn model: 1 (default) or 2.
+to distinguish the type of the utpn model: 1 (default), 2, 3 or 4.
 }
 \item{link}{
 link function to be used for the covariates: logit (default).

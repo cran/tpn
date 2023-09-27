@@ -28,4 +28,8 @@
   qfts, rfts, est.fts and choose.fts, respectively
 * corrected computation of AIC and BIC for est.utpn function
 
+### 1.7
 
+* included type 3 and 4 for utpn model
+* est.utpn function provided the estimation for sigma instead of the regression coefficients
+  when no covariates are avaliable
