@@ -2,8 +2,9 @@ export("dbtpn", "dstpn", "dtpn", "est.btpn", "est.stpn", "est.tpn", "pbtpn", "ps
        "rbtpn", "rstpn", "rtpn", "dfts", "pfts", "qfts", "rfts", "est.fts", "choose.fts",
 	"rutpn", "dutpn", "putpn", "qutpn", "est.utpn")
 importFrom("stats","dnorm", "pnorm", "integrate", "optim", 
-	"runif", "qnorm")
+	"runif", "qnorm","coef","lm")
+importFrom("RBE3","pgumbel2","dgumbel2")
 importFrom("pracma", "hessian")
 importFrom("skewMLRM", "solve2")
 importFrom("moments","skewness")
-importFrom("VGAM","laplace","dlaplace","plaplace","rlaplace","qlaplace")
+importFrom("VGAM","laplace","dlaplace","plaplace","rlaplace","qlaplace","gumbel","pgumbel","dgumbel")
