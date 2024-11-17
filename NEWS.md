@@ -33,3 +33,13 @@
 * included type 3 and 4 for utpn model
 * est.utpn function provided the estimation for sigma instead of the regression coefficients
   when no covariates are avaliable
+
+### 1.8
+
+* corrected some issues in est.uptn function
+
+### 1.9
+
+* function dtpt, ptpt, rtpt and est.tpt are included
+
+

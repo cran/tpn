@@ -1,4 +1,4 @@
-est.utpn<-function (y, x = NULL, type = 1, link = "logit", q = 0.5) 
+est.utpn=function (y, x = NULL, type = 1, link = "logit", q = 0.5) 
 {
     if (any(y <= 0 | y >= 1)) 
         stop("y must be between 0 and 1")
@@ -23,7 +23,7 @@ est.utpn<-function (y, x = NULL, type = 1, link = "logit", q = 0.5)
             beta = theta[1:r]
             lambda = theta[r + 1]
             dist <- switch(link, logit = "logis", probit = "norm", 
-                loglog = "gumbel", cloglog = "gumbel2")
+			loglog = "gumbel", cloglog = "gumbel2")
             g <- get(paste("d", dist, sep = ""), mode = "function")
             G <- get(paste("p", dist, sep = ""), mode = "function")
             rho = G(x %*% beta)
@@ -57,29 +57,13 @@ est.utpn<-function (y, x = NULL, type = 1, link = "logit", q = 0.5)
             -sum(ll)
         }
         type.aux = type
-	betas=coef(lm(qlogis(y)~x[,-1]))
-	init.lambda=c(-20,-15,-7,-4,-1.5,0,1.5,4,7,15,20)
-	auxi<-c()
-	for(jj in 1:length(init.lambda))
-	{
-		auxi[[jj]]<-try(optim(c(betas, init.lambda[jj]), llike.utpn, y = y, x = x, 
+        aux <- optim(rep(0, r + 1), llike.utpn, y = y, x = x, 
             q = q, type = type.aux, link = link, method = "BFGS", 
-            control = list(maxit = 10000), hessian = TRUE),silent=TRUE)
-	}
-	llike=sele=c()
-	for(jj in 1:length(init.lambda))
-	{
-		if(!grepl("Error",auxi[jj]))
-		{
-			llike=c(llike,-auxi[[jj]]$value)
-			sele=c(sele,jj)
-		}
-	}
-	aux=auxi[[sele[which.max(llike)]]]
+            control = list(maxit = 10000))
         param = matrix(aux$par, ncol = 1)
         colnames(param) = c("estimate")
         llike = -aux$value
-        se = try(solve(aux$hessian), silent = TRUE)
+	se = try(solve(aux$hessian),silent=TRUE)
         if (!grepl("Error", se)[1]) {
             if (min(diag(se)) > 0) {
                 param = cbind(param, sqrt(diag(se)))
@@ -155,4 +139,3 @@ est.utpn<-function (y, x = NULL, type = 1, link = "logit", q = 0.5)
     }
     res
 }
-

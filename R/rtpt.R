@@ -1,5 +1,5 @@
-rtpn <-
-function(n, sigma, lambda)
+rtpt <-
+function(n, sigma, lambda, nu)
 {
 if(is.null(n))
     stop("sample size must be specified")
@@ -7,11 +7,15 @@ if(is.null(n))
     stop("sigma must be specified")
   if(is.null(lambda))
     stop("lambda must be specified")
+  if(is.null(nu))
+    stop("nu must be specified")
   if(n<=0 | round(n)!=n)
     stop("sample size must be a positive integer")      
   if(sigma<=0)
     stop("sigma must be positive")
+  if(nu<=0)
+    stop("sigma must be positive")
 v=runif(n)
 u=runif(n)
-sigma*(qnorm(1+pnorm(lambda)*(v-1))+lambda)
+sigma*(qt(1+pt(lambda, df=nu)*(v-1), df=nu)+lambda)
 }

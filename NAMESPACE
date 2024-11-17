@@ -1,8 +1,8 @@
 export("dbtpn", "dstpn", "dtpn", "est.btpn", "est.stpn", "est.tpn", "pbtpn", "pstpn", "ptpn",
        "rbtpn", "rstpn", "rtpn", "dfts", "pfts", "qfts", "rfts", "est.fts", "choose.fts",
-	"rutpn", "dutpn", "putpn", "qutpn", "est.utpn")
+	"rutpn", "dutpn", "putpn", "qutpn", "est.utpn", "est.tpt", "rtpt", "ptpt", "dtpt")
 importFrom("stats","dnorm", "pnorm", "integrate", "optim", 
-	"runif", "qnorm","coef","lm")
+	"runif", "qnorm", "dt", "pt", "rt", "qt")
 importFrom("RBE3","pgumbel2","dgumbel2")
 importFrom("pracma", "hessian")
 importFrom("skewMLRM", "solve2")

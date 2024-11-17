@@ -5,8 +5,10 @@ est.btpn     Parameter estimation for the btpn model.
 est.ftps     Parameter estimation for the ftps model.
 est.stpn     Parameter estimation for the stpn model.
 est.tpn      Parameter estimation for the tpn model.
+est.tpt      Parameter estimation for the tpt model.
 est.utpn     Parameter estimation for the utpn model.
 ftp          Flexible truncated positive class.
 stpn         Slash truncated positive normal.
 tpn          Truncated positive normal.
+tpt          Truncated positive t.
 utpn         Unit truncated positive normal.

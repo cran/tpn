@@ -1,17 +1,17 @@
-\name{tpn}
-\alias{dtpn}
-\alias{ptpn}
-\alias{rtpn}
+\name{tpt}
+\alias{dtpt}
+\alias{ptpt}
+\alias{rtpt}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Truncated positive normal
+\title{Truncated positive t
 }
 \description{
-Density, distribution function and random generation for the truncated positive normal (tpn) discussed in Gomez, et al. (2018).
+Density, distribution function and random generation for the slash truncated positive student-t (tpt) distribution.
 }
 \usage{
-dtpn(x, sigma, lambda, log = FALSE)
-ptpn(x, sigma, lambda, lower.tail=TRUE, log=FALSE)
-rtpn(n, sigma, lambda)
+dtpt(x, sigma, lambda, nu, log = FALSE)
+ptpt(x, sigma, lambda, nu, lower.tail=TRUE, log=FALSE)
+rtpt(n, sigma, lambda, nu)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -27,6 +27,9 @@ scale parameter for the distribution
   \item{lambda}{
 shape parameter for the distribution
 }
+  \item{nu}{
+nu parameter for the distribution
+}
   \item{log}{
 logical; if TRUE, probabilities p are given as log(p).
 }
@@ -38,24 +41,24 @@ logical; if TRUE (default), probabilities are P[X <= x] otherwise, P[X > x].
 Random generation is based on the inverse transformation method. 
 }
 \value{
-dtpn gives the density, ptpn gives the distribution function and rtpn generates random deviates.
+dtpt gives the density, ptpt gives the distribution function and rtpt generates random deviates.
 
-The length of the result is determined by n for rtpn, and is the maximum of the lengths of the numerical arguments for the other functions.
+The length of the result is determined by n for rtpt, and is the maximum of the lengths of the numerical arguments for the other functions.
 
 The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
 
-A variable have tpn distribution with parameters \eqn{\sigma>0} and \eqn{\lambda \in} R if its probability density
+A variable have tpt distribution with parameters \eqn{\sigma>0}, \eqn{\lambda \in} R and \eqn{\nu>0} if its probability density
 function can be written as
 \deqn{
-f(y; \sigma, \lambda, q) = \frac{\phi\left(\frac{y}{\sigma}-\lambda\right)}{\sigma \Phi(\lambda)}, y>0,
+f(y; \sigma, \lambda, q) = \frac{t_\nu\left(\frac{y}{\sigma}-\lambda\right)}{\sigma T_\nu(\lambda)}, y>0,
 }
-where \eqn{\phi(\cdot)} and \eqn{\Phi(\cdot)} denote the density and cumultative distribution functions for the standard normal distribution.
+where \eqn{t_\nu(\cdot)} and \eqn{T_\nu(\cdot)} denote the density and cumultative distribution functions for the standard t distribution with \eqn{\nu} degrees of freedom.
 
 }
-\references{
-Gomez, H.J., Olmos, N.M., Varela, H., Bolfarine, H. (2018). Inference for a truncated positive normal
-distribution. Applied Mathemetical Journal of Chinese Universities, 33, 163-176.
-}
+%\references{
+%Gomez, H.J., Olmos, N.M., Varela, H., Bolfarine, H. (2018). Inference for a truncated positive normal
+%distribution. Applied Mathemetical Journal of Chinese Universities, 33, 163-176.
+%}
 \author{
 Gallardo, D.I. and Gomez, H.J.
 }
@@ -69,9 +72,9 @@ Gallardo, D.I. and Gomez, H.J.
 %\code{\link{tpn}}
 %}
 \examples{
-dtpn(c(1,2), sigma=1, lambda=-1)
-ptpn(c(1,2), sigma=1, lambda=-1)
-rtpn(n=10, sigma=1, lambda=-1)
+dtpt(c(1,2), sigma=1, lambda=-1, nu=5)
+ptpt(c(1,2), sigma=1, lambda=-1, nu=5)
+rtpt(n=10, sigma=1, lambda=-1, nu=5)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
