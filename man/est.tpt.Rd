@@ -9,12 +9,18 @@ Perform the parameter estimation for the truncated positive t (tpt) distribution
 based on maximum likelihood estimation. Estimated errors are computed based on the hessian matrix.
 }
 \usage{
-est.tpt(y)
+est.tpt(y, x = NULL, q = 0.5)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{y}{
 the response vector. All the values must be positive.
+}
+\item{x}{
+the covariates vector.
+}
+\item{q}{
+quantile of the distribution to be modelled.
 }
 }
 \details{

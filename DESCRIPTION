@@ -1,8 +1,8 @@
 Package: tpn
 Type: Package
 Title: Truncated Positive Normal Model and Extensions
-Version: 1.9
-Date: 2024-11-17
+Version: 1.10
+Date: 2025-04-05
 Authors@R: c(person("Diego", "Gallardo", role = c("aut","cre"), email = "dgallardo@ubiobio.cl"),
 	person("Hector J.", "Gomez", role = c("aut"), email = "hgomez@uct.cl"),
 	person("Yolanda M.", "Gomez", role = c("aut"), email = "ygomez@ubiobio.cl"))
@@ -19,6 +19,6 @@ Depends: R (>= 4.0.0)
 Imports: pracma, skewMLRM, moments, VGAM, RBE3
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2024-11-17 20:46:47 UTC; Diego
+Packaged: 2025-04-05 00:51:37 UTC; Diego
 Repository: CRAN
-Date/Publication: 2024-11-17 21:00:02 UTC
+Date/Publication: 2025-04-05 02:20:02 UTC

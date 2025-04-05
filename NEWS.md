@@ -40,6 +40,9 @@
 
 ### 1.9
 
-* function dtpt, ptpt, rtpt and est.tpt are included
+* functions dtpt, ptpt, rtpt and est.tpt are included
 
+### 1.9
+
+* est.tpt function provided the estimation for in regression case
 
