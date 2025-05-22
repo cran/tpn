@@ -1,4 +1,4 @@
-est.tpt<-function (y, x = NULL, q = 0.5) 
+est.tpt=function (y, x = NULL, q = 0.5) 
 {
     if (any(y <= 0) ) 
         stop("y must be positive")

@@ -1,7 +1,7 @@
-35c718abefb3968477cafda3fecfa59b *DESCRIPTION
+cf935f33f9b926d334ba03379c58d420 *DESCRIPTION
 a285a8b833e1e796381ad982b7026773 *INDEX
 1ec2871ca24b2ea0f8ee587ecb72f691 *NAMESPACE
-1712eea14126b73eca2fa4bf827d9efc *NEWS.md
+c8531cf3ec4e385344b23ceecd0d58b6 *NEWS.md
 839fab65ae595b4e20955746c272ef43 *R/choose.fts.R
 50a19f8df83de50cd4e9d3e63df2d800 *R/dbtpn.R
 1c5abfcbd9511e8a84be18889e32ff62 *R/dfts.R
@@ -13,7 +13,7 @@ c0d17c734be461876f3884b43b7d0258 *R/dstpn.R
 fc4c8c11cb558e44a66a7af882a9e9b8 *R/est.fts.R
 08201f0c951aa934384a42e57220e660 *R/est.stpn.R
 895d2d86d0a9d2f597cab8d2d196a38b *R/est.tpn.R
-3ff961eb262abd2bcadce57a1642ce1e *R/est.tpt.R
+026c23ddf84ce5faf1f673fb6e4bd310 *R/est.tpt.R
 eba8fb9a18080b1a56cb795cceff16c2 *R/est.utpn.R
 8c76c1f31732536b471c10ff2372565d *R/pbtpn.R
 bef9073f943fe5e199bc35b5bd7959f8 *R/pfts.R
@@ -35,10 +35,10 @@ fbb5b8b623ddf374774cbe0b66264a97 *man/btpn.Rd
 45268e7e6a1eb395faa6e51af8fd912f *man/est.fts.Rd
 cb451b98f682ac9d9159cd0e7fa089af *man/est.stpn.Rd
 793cb83fbaa1e033e1873b4fe2ec5362 *man/est.tpn.Rd
-581aa9b228745914f27ebf1c5a7d7848 *man/est.tpt.Rd
+708ef6ef0857152d6624b0c5a1bc97d1 *man/est.tpt.Rd
 f1679e77e3b763bd0e8ce4261c1c87e2 *man/est.utpn.Rd
 b488b4ee986dd4ee653dce1b30448d20 *man/fts.Rd
 ba5aff807581c3fdead5c9c4db6f413d *man/stpn.Rd
 898f436643855282b91ae97d0ac14e41 *man/tpn.Rd
-43984b9b77b06bebdaf4d32c1879289c *man/tpt.Rd
+7eb43c57a6498d161454af2f4a1ccb3f *man/tpt.Rd
 a0b5b15a7d287dcb9467b871dc194690 *man/utpn.Rd

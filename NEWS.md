@@ -42,7 +42,12 @@
 
 * functions dtpt, ptpt, rtpt and est.tpt are included
 
-### 1.9
+### 1.10
 
 * est.tpt function provided the estimation for in regression case
+
+### 1.11
+
+* corrected some issues in est.tpt function
+
 

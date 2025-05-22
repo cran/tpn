@@ -5,7 +5,7 @@
 Parameter estimation for the tpt distribution
 }
 \description{
-Perform the parameter estimation for the truncated positive t (tpt) distribution
+Perform the parameter estimation for the truncated positive Student's-t (tpt) distribution
 based on maximum likelihood estimation. Estimated errors are computed based on the hessian matrix.
 }
 \usage{

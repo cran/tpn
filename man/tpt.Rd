@@ -6,7 +6,7 @@
 \title{Truncated positive t
 }
 \description{
-Density, distribution function and random generation for the slash truncated positive student-t (tpt) distribution.
+Density, distribution function and random generation for the truncated positive Student's-t (tpt) distribution.
 }
 \usage{
 dtpt(x, sigma, lambda, nu, log = FALSE)
